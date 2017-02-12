@@ -1,13 +1,13 @@
         <!-- Bottom Scripts -->
         <script src="<?= base_url();?>assets/backend/js/jquery-1.11.1.min.js"></script>
     	<script src="<?= base_url();?>assets/backend/js/bootstrap.min.js"></script>
-    	<script src="<?= base_url();?>assets/backend/js/TweenMax.min.js"></script>
+    	<!--<script src="<?= base_url();?>assets/backend/js/TweenMax.min.js"></script>
     	<script src="<?= base_url();?>assets/backend/js/resizeable.js"></script>
     	<script src="<?= base_url();?>assets/backend/js/joinable.js"></script>
     	<script src="<?= base_url();?>assets/backend/js/xenon-api.js"></script>
-    	<script src="<?= base_url();?>assets/backend/js/xenon-toggles.js"></script>
+    	<script src="<?= base_url();?>assets/backend/js/xenon-toggles.js"></script>-->
     	<script src="<?= base_url();?>assets/backend/js/jquery-validate/jquery.validate.min.js"></script>
-    	<script src="<?= base_url();?>assets/backend/js/toastr/toastr.min.js"></script>
+    	<!--<script src="<?= base_url();?>assets/backend/js/toastr/toastr.min.js"></script>-->
     
     
     	<!-- JavaScripts initializations and stuff -->

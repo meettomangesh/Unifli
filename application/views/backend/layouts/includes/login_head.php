@@ -15,10 +15,10 @@
 	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/fonts/fontawesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/bootstrap.css">
 	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/xenon-core.css">
-	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/xenon-forms.css">
+	<!--<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/xenon-forms.css">-->
 	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/xenon-components.css">
-	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/xenon-skins.css">
-	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/custom.css">
+	<!--<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/xenon-skins.css">
+	<link rel="stylesheet" href="<?= base_url();?>assets/backend/css/custom.css">-->
 	
 	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>

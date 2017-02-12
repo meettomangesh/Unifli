@@ -31,4 +31,10 @@ class Login extends MY_Controller {
 	    $data['content'] = 'backend/login';
         $this->load->view($this->login_layout, $data);
 	}
+    
+    public function dashboard()	{
+        $data['title'] = 'Unifli Dashboard';
+	    $data['content'] = 'backend/dashboard';
+        $this->load->view($this->main_layout, $data);
+	}
 }

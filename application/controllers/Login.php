@@ -27,14 +27,15 @@ class Login extends MY_Controller {
 	 * @see https://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()	{
-        $data['title'] = 'Unifli Login';
+        $data['title'] = 'Unifli - Login';
 	    $data['content'] = 'backend/login';
         $this->load->view($this->login_layout, $data);
 	}
     
     public function dashboard()	{
-        $data['title'] = 'Unifli Dashboard';
+        $data['title'] = 'Unifli - Dashboard';
 	    $data['content'] = 'backend/dashboard';
         $this->load->view($this->main_layout, $data);
 	}
+	
 }

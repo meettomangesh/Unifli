@@ -34,31 +34,51 @@
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
                 <li class=" has">
-                    <a href="missions.html">
-                        <i class="fa-globe"></i>
-                        <span class="title">Missions</span>
-                    </a>
-                </li>
+                        <a href="<?php echo base_url();?>Login/dashboard">
+                            <i class="linecons-cog"></i>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+					<li class="active  has">
+                        <a href="<?php echo base_url();?>missions">
+                            <i class="fa-globe"></i>
+                            <span class="title">Missions</span>
+                        </a>
+                    </li>
+                    <li class="  has">
+                        <a href="<?php echo base_url();?>cadlinework/request_work">
+                            <i class="fa-won"></i>
+                            <span class="title">Request CAD Line Work</span>
+                        </a>
+                    </li>
+                    
                 <li class="active has">
-                    <a href="cad-linework-app.html">
+                    <a href="<?php echo base_url();?>cadlinework/work_application">
                         <i class="fa-pencil"></i>
                         <span class="title">CAD Linework Application</span>
                     </a>
                 </li>
                 <li class=" has">
-                    <a href="invoicing-receipts.html">
+                    <a href="<?php echo base_url();?>receipts">
                         <i class="fa-file-text-o"></i>
                         <span class="title">Invoicing / Receipts</span>
                     </a>
                 </li>
+				<li class=" has">
+					<a href="<?php echo base_url();?>plans">
+						<i class="fa-copy"></i>
+						<span class="title"> Plans</span>
+					</a>
+				</li>
+                    
                 <li class=" has">
-                    <a href="support-raise-ticket.html">
+                    <a href="<?php echo base_url();?>tickets/support">
                         <i class="fa-support"></i>
                         <span class="title">Support</span>
                     </a>
                 </li>
                 <li class=" has">
-                    <a href="raise-ticket.html">
+                    <a href="<?php echo base_url();?>tickets">
                         <i class="fa-ticket"></i>
                         <span class="title">Raise a Ticket</span>
                     </a>

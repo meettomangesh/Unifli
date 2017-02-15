@@ -16,7 +16,7 @@
     <!-- JavaScripts initializations and stuff -->
     <script src="<?= base_url();?>assets/backend/js/xenon-custom.js"></script>
     
-    /* Total Amount Spent */
+    <!-- Total Amount Spent -->
     <script>
         $(document).ready(function () {
 
@@ -55,7 +55,7 @@
         });
     </script>
     
-    /* Missions Created */
+    <!-- Missions Created -->
     <script>
         $(document).ready(function () {
 
@@ -94,7 +94,7 @@
         });
     </script>
         
-    /* CAD Linework Requested/Completed */
+    <!-- CAD Linework Requested/Completed -->
     <script>
         $(document).ready(function () {
 
@@ -138,7 +138,7 @@
         });
     </script>
     
-    /* Tickets Rised/Solved */    
+    <!-- Tickets Rised/Solved -->    
     <script>
         $(document).ready(function () {
 
@@ -182,7 +182,7 @@
         });
     </script>
     
-    /* Total Amount Spent */
+    <!-- Total Amount Spent -->
     <script>
         $(document).ready(function () {
 

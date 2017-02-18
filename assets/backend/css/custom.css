@@ -1,164 +1,439 @@
-/**
+  /**
  *
  * Apply your custom CSS here
  *
 */
 
-body {}
+  body {}
 
-a {}
+  a {}
 
-.heading-h4 {
-    border: 1px solid;
-    border-bottom-right-radius: 15px;
-    border-top-left-radius: 30px;
-    border-color: #ff751a;
-    padding: 10px;
-    box-shadow: 3px 3px 0px #ff751a;
-}
+  .heading-h4 {
+      border: 1px solid;
+      border-bottom-right-radius: 15px;
+      border-top-left-radius: 30px;
+      border-color: #ff751a;
+      padding: 10px;
+      box-shadow: 3px 3px 0px #ff751a;
+  }
 
-table,
-th,
-td {
-    border: 1px solid black;
-    border-collapse: collapse;
-}
+  table,
+  th,
+  td {
+      border: 1px solid black;
+      border-collapse: collapse;
+  }
 
-th,
-td {
+  th,
+  td {
+      padding: 5px;
+      text-align: left;
+  }
+
+  .table {
+      color: black;
+      margin-top: 20px;
+  }
+
+  .card-login {
+      border: 1px solid grey;
+      padding: 22px;
+      display: inline-block;
+      width: auto;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+
+  .card-login1 {
+      border: 1px solid grey;
+      padding: 22px;
+      display: inline-block;
+      width: 70%;
+      border-top-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+  }
+
+  .test {
+      display: inline-block;
+      padding: 10px;
+  }
+
+  .scroll-x {
+      overflow-x: hidden;
+  }
+
+  .scroll-y {
+      overflow-y: hidden;
+  }
+
+  .para {
+      border: 2px solid;
+      padding: 5px;
+  }
+
+  .test-1 {
+      margin-top: 55px;
+      margin-right: 30px;
+  }
+
+  .id-underline {
+      text-decoration: underline!important;
+  }
+
+  .create {
+      background-color: #014c7e;
+      border: none;
+  }
+
+  .create:hover {
+      background-color: #014c7e;
+      border: none;
+  }
+
+  .expense {
+      width: 30%;
+  }
+
+  .logo-expanded {
+      display: block;
+  }
+
+  .logo-expanded img {
+      width: 50%;
+      margin: 0 auto;
+      display: block;
+  }
+
+  .select-w {
+      width: 150px!important;
+  }
+
+  .example {
+      width: 300px;
+  }
+
+  .proceed {
+      margin-top: 20px;
+  }
+
+  .request-button {
+      background-color: #014c7e;
+      color: white;
+  }
+
+  .request-button:hover {
+      background-color: #014c7e;
+      border: none;
+      color: white;
+  }
+
+  .highcharts-background {
+      width: 915px;
+  }
+
+  .high-chart {
+      margin-top: 30px;
+  }
+
+  .highcharts-title {
+      display: none;
+  }
+
+  .chat-box {
+      max-height: 300px;
+      overflow: auto;
+  }
+  /*.highcharts-axis{
+    display: none;
+}*/
+
+  .highcharts-credits {
+      display: none;
+  }
+
+  .hide-y .highcharts-yaxis {
+      display: none;
+  }
+
+  .chat-box li {
+      padding: 5px 10px;
+      text-align: left;
+      border: 1px solid #e5e5e5;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      color: #494949;
+      margin-right: 20px;
+      position: relative;
+      padding-bottom: 15px;
+  }
+
+  .chat-box li.me {
+      background-color: #e5e5e5;
+      text-align: right;
+      margin-left: 20px;
+      border: 0px;
+      margin-right: 0px;
+  }
+
+  .date {
+      font-size: 10px;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 0 10px;
+      left: 0;
+      color: #7d7d7d;
+  }
+
+  .profile-input {
+      margin: 10px;
+  }
+
+  .profile-img {
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+  }
+
+  .profile-img img {
+      height: 100%;
+      width: 100%;
+  }
+
+  .account {
+      margin: 20px 0px;
+  }
+
+  .btn1 {
+      height: 50px;
+      margin-bottom: 1px;
+  }
+
+  .btn2 {
+      height: 30px;
+      margin-top: 10px;
+  }
+
+  .btn-primary {
+      color: #fff;
+      background-color: #014c7e;
+      border-color: #014c7e;
+  }
+
+  .head-bod {
+      margin-right: 10px!important;
+  }
+
+  .search-env form button[type=submit] {
+      line-height: 0;
+      padding: 15px 15px 0;
+  }
+
+  .modal-footer {
+      border-top: none;
+  }
+  /* HIGHCHARTS CSS */
+
+  .highcharts-container .highcharts-root .highcharts-button {
+      display: none !important;
+  }
+
+  .create-p {
+      padding: 20px;
+      font-size: 12px;
+  }
+
+  .nopad {
+      padding: 0;
+  }
+
+  .mb10 {
+      margin-bottom: 20px;
+  }
+
+  .upload {
+      background-color: #014c7e!important;
+      border-right: #014c77!important;
+      display: block;
+  }
+
+  .upload:hover {
+      background-color: #014c77!important;
+  }
+
+  .misn-btn {
+      background-color: #014c7e!important;
+      display: block;
+      width: 100%;
+  }
+
+  .misn-btn:hover {
+      background-color: white!important;
+      color: #014c77;
+      border: 1px solid #014c77;
+  }
+
+  .misn-btn:hover i {
+      background-color: #014c77!important;
+      color: white;
+  }
+
+  .misn-btn+.misn-btn {
+      margin-left: 0;
+  }
+  .file-p{
+    width: 60%;
     padding: 5px;
-    text-align: left;
-}
+  }
+  .retry{
+    margin: 0px;
+    color: red;
+    padding: 0px;
+  }
+  .misn-div {
+      margin: 20px 0;
+  }
 
-.table {
-    color: black;
-    margin-top: 20px;
-}
+  .misn-img {
+      width: 100px;
+      height: 100px;
+      display: inline-block;
+  }
 
-.card-login {
-    border: 1px solid grey;
-    padding: 22px;
-    display: inline-block;
-    width: auto;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
+  .misn-img img {
+      width: 100%;
+      height: 100%;
+  }
 
-.card-login1 {
-    border: 1px solid grey;
-    padding: 22px;
-    display: inline-block;
-    width: 70%;
-    border-top-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-}
+  .misn-p {
+      display: inline-block;
+  }
 
-.test {
-    display: inline-block;
-    padding: 10px;
-}
+  .rw-misn {
+      margin: 10px;
+  }
 
-.scroll-x {
-    overflow-x: hidden;
-}
+  .rw-misn {
+      padding-bottom: 20px;
+      min-height: auto;
+      border-bottom: 1px solid grey;
+  }
 
-.scroll-y {
-    overflow-y: hidden;
-}
+  .fs14 {
+      font-size: 14px;
+  }
 
-.para {
-    border: 2px solid;
-    padding: 5px;
-}
+  .btn-sm {
+      padding: 0;
+  }
 
-.test-1 {
-    margin-top: 55px;
-    margin-right: 30px;
-}
+  .btn-sm a {
+      font-size: 10px
+  }
 
-.id-underline {
-    text-decoration: underline!important;
-}
+  .ready-btn {
+      background-color: grey;
+      color: limegreen;
+      border-radius: 10px 10px 10px 10px;
+      padding: 0px 10px;
+  }
 
-.create {
-    background-color: #014c7e;
-    border: none;
-    
-}
+  .sharing {
+      border: none;
+      width: auto;
+      background: none;
+  }
 
-.create:hover {
-    background-color: #014c7e;
-    border: none;
-}
+  .sharing:hover {
+      border: none;
+      background: none;
+  }
 
-.expense {
-    width: 30%;
-}
+  .apply-btn {
+      color: #8dc63f;
+      border-color: #8dc63f;
+  }
 
-.logo-expanded {
-    display: block;
-}
+  .img-map {
+      height: 220px;
+      padding: 20px;
+  }
 
-.logo-expanded img {
-    width: 50%;
-    margin: 0 auto;
-    display: block;
-}
+  .map-img {
+      height: 100%;
+      width: 100%;
+  }
 
-.select-w {
-    width: 150px!important;
-}
+  .btn-reset {
+      margin-top: 15px;
+  }
 
-.example {
-    width: 300px;
-}
+  .com-app {
+      border: 1px solid gray;
+      width: 30%;
+      margin-left: 864px;
+      display: none;
+  }
 
-.proceed {
-    margin-top: 20px;
-}
+  .com-app div {
+      border-bottom: 1px solid gray;
+      background-color: lightgray;
+      margin: 0px;
+      padding: 1px;
+  }
 
-.request-button {
-    background-color: #014c7e;
-    color: white;
-}
+  .com-app p {
+      color: black;
+      position: relative;
+  }
+  .arrow__aft:after{
 
-.request-button:hover {
-    background-color: #014c7e;
-    border: none;
-    color: white;
-}
-
-.chat-box {
-    max-height: 300px;
-    overflow: auto;
-}
-
-.chat-box li {
-    padding: 5px 10px;
-    text-align: left;
-    border: 1px solid #e5e5e5;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    color: #494949;
-    margin-right: 20px;
-    position: relative;
-    padding-bottom: 15px;
-}
-
-.chat-box li.me {
-    background-color: #e5e5e5;
-    text-align: right;
-    margin-left: 20px;
-    border: 0px;
-    margin-right: 0px;
-}
-
-.date {
-    font-size: 10px;
+  content: '';
     position: absolute;
-    bottom: 0;
+    bottom: -46%;
+    left: 50%;
+    /*background: #fff;*/
+    border: 1px solid transparent;
+    border-top-color: #000;
+    height: 0;
+    width: 0;
+    margin-left: -16px;
+    border-width: 16px;
+    border-style: solid;
+    z-index: 1;
+  }
+  .arrow__aft:before{
+     content: '';
+    position: absolute;
+    bottom: -44%;
+    left: 50%;
+    border: 1px solid transparent;
+    border-top-color: #ffffff;
+    height: 0;
+    width: 0;
+    margin-left: -16px;
+    border-width: 16px;
+    border-style: solid;
+    z-index: 3;
+  }
+
+  th.comp1:hover + span.com-app{
+     display: block;
+  }
+
+.show-hover { display: none;position: absolute;
     width: 100%;
-    padding: 0 10px;
+    overflow: hidden;
+    top: 42px;
     left: 0;
-    color: #7d7d7d;
+    white-space: normal;
+    background-color: black;
+    z-index: 1;
+    color: white;
+    padding: 5px;
+    font-size: 11px;
+    font-weight: 300;
 }
+  .on-hover:hover .show-hover {
+display: block;
+  }

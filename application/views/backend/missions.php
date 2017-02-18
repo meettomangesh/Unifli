@@ -20,7 +20,7 @@
 								</div>
                                 </div>-->
                               <div class="col-md-6">
-                                    <div class="breadcrumb-env "> <button class="btn btn-primary popover-primary create" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="To get your drone data processed through DFM, you will have to first create a mission. Creating a mission is simple and a click away." data-original-title="Create Mission">Create Mission</button></div>
+                                    <div class="breadcrumb-env "> <a class="btn btn-primary popover-primary create" data-toggle="popover" data-trigger="hover" data-placement="top" data-content="To get your drone data processed through DFM, you will have to first create a mission. Creating a mission is simple and a click away." data-original-title="Create Mission" href="<?php echo base_url();?>missions/create_mission">Create Mission</a></div>
                                 </div>
                                     <div class="col-md-6">
                                 <section class="search-env" >

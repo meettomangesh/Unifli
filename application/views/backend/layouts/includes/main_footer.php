@@ -1,5 +1,5 @@
 <!-- Bottom Scripts -->
-    <script src="<?= base_url();?>assets/backend/js/jquery-1.11.1.min.js"></script>
+    
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="<?= base_url();?>assets/backend/js/bootstrap.min.js"></script>
     <script src="<?= base_url();?>assets/backend/js/TweenMax.min.js"></script>

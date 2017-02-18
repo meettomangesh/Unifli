@@ -14,12 +14,14 @@ class Cadlinework extends MY_Controller {
 	public function request_work()	{
         $data['title'] = 'Unifli - Request CAD Line Work';
 	    $data['content'] = 'backend/request_work';
+		$data['is_active_link'] = 'request_work';
         $this->load->view($this->main_layout, $data);
 	}
 	
 	public function work_application()	{
         $data['title'] = 'Unifli - CAD Linework Application';
 	    $data['content'] = 'backend/work_application';
+	    $data['is_active_link'] = 'work_application';
         $this->load->view($this->main_layout, $data);
 	}
 }

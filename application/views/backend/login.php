@@ -1,5 +1,6 @@
 <div class="login-container">	
 	<div class="row">
+		<div class="col-sm-4"></div>	
 		<div class="col-sm-6">
 			<!-- Errors container -->
 			<div class="errors-container"></div>
@@ -8,7 +9,7 @@
 			<form method="post" role="form" id="login" class="login-form fade-in-effect">
 
 				<div class="login-header">
-					<a href="dashboard-1.html" class="logo">
+					<a href="<?php echo base_url();?>" class="logo">
 						<img src="<?= base_url();?>assets/backend/images/3.png" alt="" width="120" />
 					</a>
 
@@ -33,10 +34,10 @@
 				</div>
 
 				<div class="login-footer">
-					<a href="#">Forgot your password?</a>
+					<a href="<?php echo base_url();?>user/forget_password">Forgot your password?</a>
 
 					<div class="">
-						<a href="#">Reset Password</a> 
+						<a href="<?php echo base_url();?>user/reset_password">Reset Password</a> 
 					</div>	
 				</div>	
 			</form>	

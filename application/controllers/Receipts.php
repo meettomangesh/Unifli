@@ -14,6 +14,7 @@ class Receipts extends MY_Controller {
 	public function index()	{
         $data['title'] = 'Unifli - Invoicing / Receipts';
 	    $data['content'] = 'backend/receipts';
+		$data['is_active_link'] = 'receipts';
         $this->load->view($this->main_layout, $data);
 	}
 }

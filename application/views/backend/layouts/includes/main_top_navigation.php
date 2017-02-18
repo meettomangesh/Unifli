@@ -219,7 +219,7 @@
                         </form>
                     </li>
                     <li class="dropdown user-profile">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <a href="<?php echo base_url();?>user/profile" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?= base_url();?>assets/backend/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
                             <span>
 								John Smith
@@ -227,7 +227,19 @@
 							</span>
                         </a>
                         <ul class="dropdown-menu user-profile-menu list-unstyled">
-                            <li class="last">
+                            <li class="">
+                                <a href="<?php echo base_url();?>user/profile">
+                                    <i class="fa-user"></i> Profile
+                                </a>
+                            </li>
+
+                            <li class="">
+                                <a href="<?php echo base_url();?>user/account">
+                                    <i class="fa-credit-card"></i> Account
+                                </a>
+                            </li>
+
+							<li class="last">
                                 <a href="extra-lockscreen.html">
                                     <i class="fa-lock"></i> Logout
                                 </a>

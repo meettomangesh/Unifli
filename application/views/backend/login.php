@@ -3,7 +3,11 @@
 		<div class="col-sm-4"></div>	
 		<div class="col-sm-6">
 			<!-- Errors container -->
-			<div class="errors-container"></div>
+			<div class="errors-container">
+				<?php if(!empty($error_message)) { 
+				echo "<div class='alert alert-warning alert-dismissable fade in'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>".$error_message."</div>";
+				} ?>
+			</div>
 
 			<!-- Add class "fade-in-effect" for login form effect -->
 			<form method="post" role="form" id="login" class="login-form fade-in-effect">
@@ -21,7 +25,7 @@
 				</div>
 
 				<div class="form-group">
-					<input type="password" class="form-control" name="passwd" placeholder="Password" id="passwd" autocomplete="off" />
+					<input type="password" class="form-control" name="password" placeholder="Password" id="passwd" autocomplete="off" />
 				</div>
 
 				<div class="form-group">

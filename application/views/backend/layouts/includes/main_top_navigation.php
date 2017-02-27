@@ -240,7 +240,7 @@
                             </li>
 
 							<li class="last">
-                                <a href="extra-lockscreen.html">
+                                <a href="<?php echo base_url();?>user/logout">
                                     <i class="fa-lock"></i> Logout
                                 </a>
                             </li>

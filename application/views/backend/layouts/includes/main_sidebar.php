@@ -1,4 +1,8 @@
-<?php $is_active_link = isset($is_active_link)?$is_active_link:'dashboard';?>
+<?php 
+$is_active_link = isset($is_active_link)?$is_active_link:'dashboard';
+
+
+?>
 <div class="sidebar-menu toggle-others fixed">
         <div class="sidebar-menu-inner">
             <header class="logo-env">
@@ -35,55 +39,54 @@
                 <!-- add class "multiple-expanded" to allow multiple submenus to open -->
                 <!-- class "auto-inherit-active-class" will automatically add "active" class for parent elements who are marked already with class "active" -->
 				<li class="<?php echo ($is_active_link == 'dashboard')?'active':''; ?> has">
-                        <a href="<?php echo base_url();?>user/dashboard">
-                            <i class="linecons-cog"></i>
-                            <span class="title">Dashboard</span>
-                        </a>
-                    </li>
-					<li class="<?php echo ($is_active_link == 'missions')?'active':''; ?>  has">
-                        <a href="<?php echo base_url();?>missions">
-                            <i class="fa-globe"></i>
-                            <span class="title">Missions</span>
-                        </a>
-                    </li>
-                    <li class="<?php echo ($is_active_link == 'request_work')?'active':''; ?>  has">
-                        <a href="<?php echo base_url();?>cadlinework/request_work">
-                            <i class="fa-won"></i>
-                            <span class="title">Request CAD Line Work</span>
-                        </a>
-                    </li>
-                    
-                <li class="<?php echo ($is_active_link == 'work_application')?'active':''; ?> has">
-                    <a href="<?php echo base_url();?>cadlinework/work_application">
-                        <i class="fa-pencil"></i>
-                        <span class="title">CAD Linework Application</span>
-                    </a>
-                </li>
-                <li class="<?php echo ($is_active_link == 'receipts')?'active':''; ?> has">
-                    <a href="<?php echo base_url();?>receipts">
-                        <i class="fa-file-text-o"></i>
-                        <span class="title">Invoicing / Receipts</span>
-                    </a>
-                </li>
+					<a href="<?php echo base_url();?>user/dashboard">
+						<i class="linecons-cog"></i>
+						<span class="title">Dashboard</span>
+					</a>
+				</li>
+				<li class="<?php echo ($is_active_link == 'missions')?'active':''; ?>  has">
+					<a href="<?php echo base_url();?>missions">
+						<i class="fa-globe"></i>
+						<span class="title">Missions</span>
+					</a>
+				</li>
+				<li class="<?php echo ($is_active_link == 'request_work')?'active':''; ?>  has">
+					<a href="<?php echo base_url();?>cadlinework/request_work">
+						<i class="fa-won"></i>
+						<span class="title">Request CAD Line Work</span>
+					</a>
+				</li>
+				<li class="<?php echo ($is_active_link == 'work_application')?'active':''; ?> has">
+					<a href="<?php echo base_url();?>cadlinework/work_application">
+						<i class="fa-pencil"></i>
+						<span class="title">CAD Linework Application</span>
+					</a>
+				</li>
+				<li class="<?php echo ($is_active_link == 'receipts')?'active':''; ?> has">
+					<a href="<?php echo base_url();?>receipts">
+						<i class="fa-file-text-o"></i>
+						<span class="title">Invoicing / Receipts</span>
+					</a>
+				</li>
 				<li class="<?php echo ($is_active_link == 'plans')?'active':''; ?> has">
 					<a href="<?php echo base_url();?>plans">
 						<i class="fa-copy"></i>
 						<span class="title"> Plans</span>
 					</a>
 				</li>
-                    
-                <li class="<?php echo ($is_active_link == 'support')?'active':''; ?> has">
-                    <a href="<?php echo base_url();?>tickets/support">
-                        <i class="fa-support"></i>
-                        <span class="title">Support</span>
-                    </a>
-                </li>
-                <li class="<?php echo ($is_active_link == 'tickets')?'active':''; ?> has">
-                    <a href="<?php echo base_url();?>tickets">
-                        <i class="fa-ticket"></i>
-                        <span class="title">Raise a Ticket</span>
-                    </a>
-                </li>
+					
+				<li class="<?php echo ($is_active_link == 'support')?'active':''; ?> has">
+					<a href="<?php echo base_url();?>tickets/support">
+						<i class="fa-support"></i>
+						<span class="title">Support</span>
+					</a>
+				</li>
+				<li class="<?php echo ($is_active_link == 'tickets')?'active':''; ?> has">
+					<a href="<?php echo base_url();?>tickets">
+						<i class="fa-ticket"></i>
+						<span class="title">Raise a Ticket</span>
+					</a>
+				</li>
             </ul>
         </div>
     </div>

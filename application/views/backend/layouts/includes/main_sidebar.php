@@ -60,7 +60,7 @@ $user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
 					if(in_array($user_access_id, array(1))) {
 				?>
 				<li class="<?php echo ($is_active_link == 'users')?'active':''; ?>  has">
-					<a href="<?php echo base_url();?>users">
+					<a href="<?php echo base_url();?>user">
 						<i class="fa-won"></i>
 						<span class="title">Users</span>
 					</a>
@@ -161,7 +161,7 @@ $user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
 					if(in_array($user_access_id, array(1))) {
 				?>
 				<li class="<?php echo ($is_active_link == 'reporting')?'active':''; ?> has">
-					<a href="#">
+					<a href="<?php echo base_url();?>reporting">
 						<i class="fa-ticket"></i>
 						<span class="title">Reporting</span>
 					</a>
@@ -201,7 +201,7 @@ $user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
 					if(in_array($user_access_id, array(1))) {
 				?>
 				<li class="<?php echo ($is_active_link == 'vendor_mgmt')?'active':''; ?> has">
-					<a href="#">
+					<a href="<?php echo base_url();?>vendormgmt">
 						<i class="fa-ticket"></i>
 						<span class="title">Vendor Management</span>
 					</a>

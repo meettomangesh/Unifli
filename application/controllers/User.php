@@ -95,7 +95,6 @@ class User extends MY_Controller {
 					$_SESSION['logged_in']    = (bool)true;
 					$_SESSION['is_active'] = (bool)$user->is_active;
 					$_SESSION['user_access_id']     = (int)$user->user_access_id;
-					$this->config->set_item('user_access_id',(int)$user->user_access_id);
 					redirect(base_url().'user/dashboard','refresh');;
 
 					} else {

@@ -1,3 +1,6 @@
+<?php 
+$user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
+?>
 <div class="main-content">
             <nav class="navbar user-info-navbar" role="navigation">
                 <!-- User Info, Notifications and Menu Bar -->
@@ -222,7 +225,7 @@
                         <a href="<?php echo base_url();?>user/profile" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?= base_url();?>assets/backend/images/user-4.png" alt="user-image" class="img-circle img-inline userpic-32" width="28" />
                             <span>
-								John Smith
+								<?php echo $user_name; ?>
 								<i class="fa-angle-down"></i>
 							</span>
                         </a>

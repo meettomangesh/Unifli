@@ -92,6 +92,8 @@ class User extends MY_Controller {
 					// set session user datas
 					$_SESSION['user_id']      = (int)$user->id;
 					$_SESSION['username']     = (string)$user->username;
+					$_SESSION['first_name']     = (string)$user->first_name;
+					$_SESSION['last_name']     = (string)$user->last_name;
 					$_SESSION['logged_in']    = (bool)true;
 					$_SESSION['is_active'] = (bool)$user->is_active;
 					$_SESSION['user_access_id']     = (int)$user->user_access_id;

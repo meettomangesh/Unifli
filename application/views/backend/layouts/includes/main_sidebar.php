@@ -1,6 +1,7 @@
 <?php 
 $is_active_link = isset($is_active_link)?$is_active_link:'dashboard';
 $user_access_id = $_SESSION['user_access_id'];
+$user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
 ?>
 <div class="sidebar-menu toggle-others fixed">
         <div class="sidebar-menu-inner">
@@ -31,7 +32,7 @@ $user_access_id = $_SESSION['user_access_id'];
                     <a href="<?php echo base_url();?>user/profile" class="user-profile">
                         <img src="http://themes.laborator.co/xenon/assets/images/user-4.png" width="60" height="60" class="img-circle img-corona"
                             alt="user-pic">
-                            <span> <strong>John Smith</strong>Page admin</span> </a>
+                            <span> <strong><?php echo $user_name;?></strong>Page admin</span> </a>
                 </div>
             </section>
             <ul id="main-menu" class="main-menu">

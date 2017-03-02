@@ -1,7 +1,7 @@
 <?php 
 $is_active_link = isset($is_active_link)?$is_active_link:'dashboard';
 $user_access_id = $_SESSION['user_access_id'];
-$user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
+$user_name = $_SESSION['name'];
 ?>
 <div class="sidebar-menu toggle-others fixed">
         <div class="sidebar-menu-inner">
@@ -59,7 +59,7 @@ $user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
 					}
 					if(in_array($user_access_id, array(1))) {
 				?>
-				<li class="<?php echo ($is_active_link == 'users')?'active':''; ?>  has">
+				<li class="<?php echo ($is_active_link == 'user')?'active':''; ?>  has">
 					<a href="<?php echo base_url();?>user">
 						<i class="fa-won"></i>
 						<span class="title">Users</span>

@@ -1,8 +1,7 @@
-<?php //echo "<pre>"; print_r($user); ?>
 <div class="page-title">
 
 	<div class="title-env">
-		<h1 class="title">Profile</h1></div>
+		<h1 class="title">Create User</h1></div>
 	</div>
 
 <div class="row">
@@ -23,7 +22,7 @@
 								</div>
 
 							</div>
-							<div class="col-md-10 col-sm-8">
+							<!--<div class="col-md-10 col-sm-8">
 
 								<div class="user-img profile-img">
 									<img src="<?= base_url();?>assets/backend/images/user-2.png" class="img-circle" alt="user-pic" />
@@ -33,49 +32,68 @@
 									<span><?php echo $user->acess_name;?></span>
 								</div>
 
-							</div>
+							</div>-->
 						</div>
 					</div>
 
 			<div class="row">
-			  <div class="col-md-6">
-				<div class="col-sm-10 profile-input">
-									<input type="text" class="form-control" id="name" name='name' placeholder="Name" value="<?php echo $user->name;?>">
-								</div>
-				<div class="col-sm-10 profile-input">
-									<input type="text" class="form-control" id="organisation" name="organisation" value="<?php echo $user->organisation;?>" placeholder="Organization">
-								</div>
-				<div class="col-sm-10 profile-input">
-									<input type="number" class="form-control" id="phone" name="phone" value="<?php echo $user->phone;?>" placeholder="Phone">
-								</div>
-				<div class="col-sm-10 profile-input">
-									<input type="text" class="form-control" id="Address" name='address' value="<?php echo $user->address;?>" placeholder="Address">
-								</div>
-				<div class="col-sm-10 profile-input">
-									<input type="text" class="form-control" id="state" name="state" value="<?php echo $user->state;?>" placeholder="State">
-								</div>
-				<div class="col-sm-10 profile-input">
-									<input type="text" class="form-control" id="website" name="website" value="<?php echo $user->website;?>"  placeholder="Website">
-								</div>
-			  </div>
-			  <div class="col-md-6">
-				<div class="col-sm-10 profile-input">
-				  <input type="email" class="form-control" id="Email" name="email" value="<?php echo $user->email;?>" placeholder="Email">
+				<div class="col-md-6">
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="name" name='name' placeholder="Name" required value="">
+					</div>
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="username" name='username' required placeholder="User Name" value="">
+					</div>
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="password" name='password' required placeholder="Password" value="<?php echo uniqid();?>">
+					</div>
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="organisation" name="organisation" value="" placeholder="Organization">
+					</div>
+					<div class="col-sm-10 profile-input">
+						<input type="number" class="form-control" id="phone" name="phone" value="" placeholder="Phone">
+					</div>
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="Address" name='address' value="" placeholder="Address">
+					</div>
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="state" name="state" value="" placeholder="State">
+					</div>
+					
 				</div>
-				<div class="col-sm-10 profile-input">
-				  <input type="text" class="form-control" id="designation" name="designation" value="<?php echo $user->designation;?>" placeholder="Designation">
-				</div>
-				<div class="col-sm-10 profile-input">
-				  <input type="number" class="form-control" id="Mobile" name="mobile" value="<?php echo $user->mobile;?>" placeholder="Mobile">
-				</div>
-				<div class="col-sm-10 profile-input">
-				  <input type="text" class="form-control" id="city" name="city" value="<?php echo $user->city;?>" placeholder="city">
-				</div>
-				<div class="col-sm-10 profile-input">
-				  <input type="number" class="form-control" id="Zip" name="zip" value="<?php echo $user->zip;?>" placeholder="Zip">
-				</div>
-					<input type="hidden" name="uuid" value="<?php echo $user->uuid;?>" >
-			  </div>
+				<div class="col-md-6">
+					<div class="col-sm-10 profile-input">
+						<input type="text" class="form-control" id="website" name="website" value=""  placeholder="Website">
+					</div>
+					<div class="col-sm-10 profile-input">
+					  <input type="email" class="form-control" id="Email" required name="email" value="" placeholder="Email">
+					</div>
+					<div class="col-sm-10 profile-input">
+					  <input type="text" class="form-control" id="designation" name="designation" value="" placeholder="Designation">
+					</div>
+					<div class="col-sm-10 profile-input">
+					  <input type="number" class="form-control" id="Mobile" name="mobile" value="" placeholder="Mobile">
+					</div>
+					<div class="col-sm-10 profile-input">
+					  <input type="text" class="form-control" id="city" name="city" value="" placeholder="city">
+					</div>
+					<div class="col-sm-10 profile-input">
+					  <input type="number" class="form-control" id="Zip" name="zip" value="" placeholder="Zip">
+					</div>
+					<div class="col-md-10 profile-input">
+						<div class="form-group">
+							<select class="form-control" name="user_access" id="user_access" required>
+								<option value=''>Select User Access Level</option>
+								<?php 
+									foreach($all_user_access as $user_acess){
+								?>
+								<option value="<?php echo $user_acess->user_acess_uuid ?>"><?php echo $user_acess->acess_name?></option>
+								<?php								
+									}
+								?>
+							</select>
+						</div>
+					</div>
 
 			</div>
 

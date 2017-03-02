@@ -30,19 +30,20 @@ class User_model extends CI_Model {
 	 * @param mixed $password
 	 * @return bool true on success, false on failure
 	 */
-	public function create_user($username, $email, $password, $user_access_id) {
+	public function create_user($data) {
 		
-		$data = array(
-			'username'   => $username,
-			'email'      => $email,
-			'password'   => $this->hash_password($password),
-			'user_access_id'   => $user_access_id,
-			'created_date' => date('Y-m-j H:i:s'),
-		);
-		
+		$data['password'] = $this->hash_password($data['password']);
 		return $this->db->insert('users', $data);
 		
 	}
+	
+	public function update_user($data, $uuid) {
+		
+		$this->db->where('uuid', $uuid);
+		return $this->db->update('users', $data);
+		
+	}
+	
 	
 	/**
 	 * resolve_user_login function.
@@ -72,11 +73,11 @@ class User_model extends CI_Model {
 	 */
 	public function get_user_id_from_username($username) {
 		
-		$this->db->select('id');
+		$this->db->select('uuid');
 		$this->db->from('users');
 		$this->db->where('username', $username);
 
-		return $this->db->get()->row('id');
+		return $this->db->get()->row('uuid');
 		
 	}
 	
@@ -90,10 +91,41 @@ class User_model extends CI_Model {
 	public function get_user($user_id) {
 		
 		$this->db->from('users');
-		$this->db->where('id', $user_id);
+		$this->db->join('users_acess','users.user_access_id = users_acess.user_acess_uuid');
+		$this->db->where('uuid', $user_id);
 		return $this->db->get()->row();
 		
 	}
+	
+	/**
+	 * get_user_access function.
+	 * 
+	 * @access public
+	 * @return object the user access object
+	 */
+	public function get_user_access() {
+		$this->db->select(array('user_acess_uuid','acess_name'));
+		$this->db->from('users_acess');
+		return $this->db->get()->result();
+		
+	}
+	
+	/**
+	 * get_user function.
+	 * 
+	 * @access public
+	 * @param mixed $user_id
+	 * @return object the user object
+	 */
+	public function get_all_user($user_id) {
+		
+		$this->db->from('users');
+		$this->db->join('users_acess','users.user_access_id = users_acess.user_acess_uuid');
+		$this->db->where_not_in('uuid', $user_id);
+		return $this->db->get()->result();
+		
+	}
+	
 	
 	/**
 	 * hash_password function.

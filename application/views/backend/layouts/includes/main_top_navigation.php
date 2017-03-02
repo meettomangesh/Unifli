@@ -1,5 +1,5 @@
 <?php 
-$user_name = $_SESSION['first_name'].' '.$_SESSION['last_name'];
+$user_name = $_SESSION['name'];
 ?>
 <div class="main-content">
             <nav class="navbar user-info-navbar" role="navigation">

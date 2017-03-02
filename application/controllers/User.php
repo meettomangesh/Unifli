@@ -37,6 +37,25 @@ class User extends MY_Controller {
 		$data['title'] = 'Unifli - Profile';
 	    $data['content'] = 'backend/profile';
 	    $data['is_active_link'] = 'profile';
+		$user_id = $_SESSION['user_id'];
+		if($this->input->post()) {
+			$post_data = array(
+               'name' => $this->input->post('name'),
+               'organisation' => $this->input->post('organisation'),
+               'address' => $this->input->post('address'),
+               'state' => $this->input->post('state'),
+               'website' => $this->input->post('website'),
+               'email' => $this->input->post('email'),
+               'designation' => $this->input->post('designation'),
+               'mobile' => $this->input->post('mobile'),
+               'city' => $this->input->post('city'),
+               'zip' => $this->input->post('zip'),
+            );
+			$this->user_model->update_user($post_data, $this->input->post('uuid'));	
+			$data['success_message'] = 'User updated successfully.';
+		}
+		$user    = $this->user_model->get_user($user_id);
+		$data['user'] = $user;
         $this->load->view($this->main_layout, $data);
 	
 	}
@@ -90,14 +109,13 @@ class User extends MY_Controller {
 					$user    = $this->user_model->get_user($user_id);
 					
 					// set session user datas
-					$_SESSION['user_id']      = (int)$user->id;
+					$_SESSION['user_id']      = (int)$user->uuid;
 					$_SESSION['username']     = (string)$user->username;
-					$_SESSION['first_name']     = (string)$user->first_name;
-					$_SESSION['last_name']     = (string)$user->last_name;
+					$_SESSION['name']     = (string)$user->name;
 					$_SESSION['logged_in']    = (bool)true;
 					$_SESSION['is_active'] = (bool)$user->is_active;
 					$_SESSION['user_access_id']     = (int)$user->user_access_id;
-					redirect(base_url().'user/dashboard','refresh');;
+					redirect(base_url().'user','refresh');
 
 					} else {
 					
@@ -123,8 +141,80 @@ class User extends MY_Controller {
 			//$this->login(); 
 			redirect(base_url().'user/login','refresh'); 
 		} else {
-			$this->dashboard();
+			if($_SESSION['user_access_id'] == 1) {
+				
+				$data['title'] = 'Unifli - Users';
+				$data['content'] = 'backend/user/index';
+				$data['is_active_link'] = 'user';
+				$data['all_user'] = $this->user_model->get_all_user($_SESSION['user_id']);
+				$this->load->view($this->main_layout, $data);
+			
+			} else { 
+				
+				$this->dashboard();
+			
+			}
 		} 
+	}
+	
+	public function create_user()	{
+
+		$this->authRedirect();
+		
+		if($_SESSION['user_access_id'] == 1) {
+			
+			if($this->input->post()) {
+				// load form helper and validation library
+				$this->load->helper('form');
+				$this->load->library('form_validation');
+
+				// set validation rules
+				$this->form_validation->set_rules('username', 'Username', 'required');
+				$this->form_validation->set_rules('password', 'Password', 'required');
+				$this->form_validation->set_rules('name', 'Name', 'required');
+				$this->form_validation->set_rules('user_access', 'User Access', 'required');
+				
+				if ($this->form_validation->run() == false) {
+				
+				// validation not ok, send validation errors to the view
+				$data['error_message'] = 'Please enter the required fields.';			
+				} else {
+				
+					$post_data = array(
+					   'name' => $this->input->post('name'),
+					   'organisation' => $this->input->post('organisation'),
+					   'user_access_id' => $this->input->post('user_access'),
+					   'address' => $this->input->post('address'),
+					   'state' => $this->input->post('state'),
+					   'website' => $this->input->post('website'),
+					   'email' => $this->input->post('email'),
+					   'username' => $this->input->post('username'),
+					   'password' => $this->input->post('password'),
+					   'designation' => $this->input->post('designation'),
+					   'mobile' => $this->input->post('mobile'),
+					   'phone' => $this->input->post('phone'),
+					   'city' => $this->input->post('city'),
+					   'zip' => $this->input->post('zip'),
+					   'users_created_date' => 'now()',
+					   'users_updated_date' => 'now()',
+					);
+					$this->user_model->create_user($post_data);	
+					$data['success_message'] = 'User created successfully.';
+				}
+			}
+
+			$data['title'] = 'Unifli - Users';
+			$data['content'] = 'backend/user/create_user';
+			$data['is_active_link'] = 'user';
+			$data['all_user_access'] = $this->user_model->get_user_access();
+			$this->load->view($this->main_layout, $data);
+		
+		} else { 
+			
+			$this->dashboard();
+		
+		}
+		
 	}
 	
 	public function forget_password()	{
